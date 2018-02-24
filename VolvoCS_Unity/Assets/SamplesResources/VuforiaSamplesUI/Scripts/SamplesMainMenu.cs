@@ -23,6 +23,7 @@ public class SamplesMainMenu : MonoBehaviour
         ObjectReco,
         CloudReco,
         VirtualButtons,
+		Ex
     }
 
     public Canvas AboutCanvas;
@@ -38,6 +39,9 @@ public class SamplesMainMenu : MonoBehaviour
     public const string LoadingScene = "2-Loading";
 
     SamplesAboutScreenInfo aboutScreenInfo;
+
+	[Header("Team AVA")]
+	public GameObject RewardsUI;
 
     #endregion // PUBLIC_MEMBERS
 
@@ -109,6 +113,9 @@ public class SamplesMainMenu : MonoBehaviour
             case ("VirtualButtons"):
                 menuItem = MenuItem.VirtualButtons;
                 break;
+			case ("Ex"):
+				menuItem = MenuItem.Ex;
+				break;
         }
 
         AboutTitle.text = aboutScreenInfo.GetTitle(menuItem.ToString());
@@ -146,8 +153,16 @@ public class SamplesMainMenu : MonoBehaviour
                 dbConfig.DataSetsToLoad = dbConfig.DataSetsToActivate = new[] { "VuforiaMars_VuMark" };
                 config.Vuforia.MaxSimultaneousImageTargets = 10;
                 break;
+			case ("Ex"):
+				ShowRewards ();
+				break;
         }
     }
+
+	private void ShowRewards(){
+		RewardsUI.SetActive (true);
+	}
+
 
     #endregion // PUBLIC_METHODS
 

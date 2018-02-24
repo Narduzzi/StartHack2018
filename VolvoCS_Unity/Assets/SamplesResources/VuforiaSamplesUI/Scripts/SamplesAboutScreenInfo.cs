@@ -65,7 +65,8 @@ public class SamplesAboutScreenInfo
             { "UserDefinedTargets", "User Defined Targets" },
             { "ObjectReco", "Object Reco" },
             { "CloudReco", "Cloud Reco" },
-            { "VirtualButtons", "Virtual Buttons" }
+            { "VirtualButtons", "Virtual Buttons" },
+			{ "Ex", "Exemple" } // Added
         };
 
         // Init our Common Cache Strings
@@ -292,6 +293,28 @@ public class SamplesAboutScreenInfo
             "• Single tap to focus\n" +
             "\n" +
             footer + "\n");
+
+		// Exemple
+
+		descriptions.Add(
+			"Ex",
+			description + "\n" +
+			"The Virtual Buttons sample shows how the developer can define rectangular " +
+			"regions on image targets that trigger an event when touched or occluded in " +
+			"the camera view. The sample renders a 3D object that changes color when " +
+			"one of the virtual buttons is triggered.\n" +
+			"\n" +
+			keyFunctionality + "\n" +
+			"• Button occlusion event handling\n" +
+			"\n" +
+			targets + "\n" +
+			"• Included Targets\n" +
+			"\n" +
+			instructions + "\n" +
+			"• Point camera at target to view\n" +
+			"• Single tap to focus\n" +
+			"\n" +
+			footer + "\n");
     }
 
     #endregion // CONSTRUCTOR
